@@ -7,8 +7,8 @@
         <link rel="apple-touch-icon" sizes="180x180" href="/../images/favicon/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/../images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/../images/favicon/favicon-16x16.png">
-        
-        <link rel="stylesheet" href="/../style.css">
+
+        <link rel="stylesheet" href="style.css">
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,20 +22,34 @@
             });
         </script>
     </head>
-    <body>
-        <div class="container">
+    <body><div class="container">
+
+            <div id="div_login">
+                <h1>Login</h1>
+                <div id="message"></div>
+                    <label class="loginLabel">Email :</label>
+                    <input type="text" name="email" id="email">
+
+                    <label class="loginLabel">Password :</label>
+                    <input type="password" name="password" id="password">
+
+                    <input type="button" name="login" id="login" value="Login">
+            </div>
+
+        </div>
+        <!--<div class="container">
             <div class="main">
                 <form method="post" action="#">
                     <h2>Login</h2>
                     <label class="loginLabel">Email :</label>
                     <input type="text" name="demail" id="email">
-                    
+
                     <label class="loginLabel">Password :</label>
                     <input type="password" name="password" id="password">
-                    
+
                     <input type="button" name="login" id="login" value="Login">
                 </form> 
             </div>
-        </div>
+        </div>-->
     </body>
 </html>

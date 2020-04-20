@@ -1,3 +1,17 @@
+<?php
+include "connection.php";
+
+// Check user login or not
+if(!isset($_SESSION['email'])){
+    header('Location: index.php');
+}
+
+// logout
+if(isset($_POST['but_logout'])){
+    session_destroy();
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,12 +27,8 @@
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <body>
-        <!-- Include header -->
-        <?php include_once 'header.php'; ?>
-        
-        <h1>Hello There!</h1>
-        <p>This site is for a database over games</p><br><br>
-        
-        <a href="login.html">Login</a>
+        <form method='post' action="">
+            <input type="submit" value="Logout" name="but_logout">
+        </form>
     </body>
 </html>

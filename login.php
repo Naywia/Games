@@ -1,21 +1,24 @@
 <?php
-include_once '/../connection.php';
+include_once 'connection.php';
 
-$email = $_POST['email1']; // Fetching Values from URL.
-$password = sha1($_POST['password1']); // Password Encryption, If you like you can also leave sha1.
-// check if e-mail address syntax is valid or not
-$email = filter_var($email, FILTER_SANITIZE_EMAIL); // sanitizing email(Remove unexpected symbol like <,>,?,#,!, etc.)
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    echo "Invalid Email.......";
-} else {
-// Matching user input email and password with stored email and password in database.
-    $result = mysql_query("SELECT * FROM registration WHERE email='$email' AND password='$password'");
-    $data = mysql_num_rows($result);
-    if ($data == 1) {
-        echo "Successfully Logged in...";
-    } else {
-        echo "Email or Password is wrong...!!!!";
+
+$email = mysqli_real_escape_string($conn,$_POST['username']);
+$password = mysqli_real_escape_string($conn,$_POST['password']);
+
+if ($email != "" && $password != ""){
+
+    $sql_query = "select count(*) as cntUser from users where username='".$email."' and password='".$password."'";
+    $result = mysqli_query($conn,$sql_query);
+    $row = mysqli_fetch_array($result);
+
+    $count = $row['cntUser'];
+
+    if($count > 0){
+        $_SESSION['email'] = $email;
+        echo 1;
+    }else{
+        echo 0;
     }
+
 }
-mysql_close($connection); // Connection Closed.
 
