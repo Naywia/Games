@@ -9,6 +9,7 @@
             $(document).ready(function () {
                 $("form").submit(function () {
                     alert("Submitted");
+                    $("p").after("<p>Succesfully submitted</p>");
                 });
             });
         </script>
