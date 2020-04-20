@@ -3,3 +3,16 @@
     Author     : Naywia
 */
 
+/* Header for all pages */
+header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    color: #000;
+    background-color: #ccc;
+}
+
+/* The header contains three divs. One with a logo, one with a name and one on the right to center everyhting else */
+.headerLeft, .headerRight {
+    flex: 1;
+}
