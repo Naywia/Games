@@ -12,7 +12,18 @@ header {
     background-color: #ccc;
 }
 
-/* The header contains three divs. One with a logo, one with a name and one on the right to center everyhting else */
+/* The header contains three divs. One on the left, one with a title and one on the right to center everyhting else */
 .headerLeft, .headerRight {
     flex: 1;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 38px;
 }
