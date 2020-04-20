@@ -1,16 +1,30 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Games - Login</title>
+
+        <!-- Site Icons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/../images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/../images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/../images/favicon/favicon-16x16.png">
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("form").submit(function () {
+                    alert("Submitted");
+                    $("p").after("<p>Succesfully submitted</p>");
+                });
+            });
+        </script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <form action="">
+            E-mail: <input type="email" name="email" placeholder="e-mail"><br>
+            Password: <input type="password" name="password" placeholder="password"><br>
+            <input type="submit" value="login">
+        </form> 
     </body>
 </html>
