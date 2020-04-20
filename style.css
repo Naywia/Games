@@ -25,9 +25,50 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #fff;
 }
 
 .title h1 {
     margin: 0;
     font-size: 38px;
+}
+
+.navbar{
+    display: flex;
+    width: 100%;
+    background-color: #1f1f1f;
+}
+
+.navLinks{
+    display: flex;
+    float: right;
+    padding: 17px 35px 0px 0px;
+}
+
+.navLinks a{
+    color: #fff;
+    text-align: center;
+    padding: 0px 14px 3px 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+.navLink{
+    
+}
+
+.nav{
+    display: inline-block;
+    padding: 0 .25em;
+}
+
+.imageContainer{
+    display: flex;
+    float: left;
+    padding: 10px 0px 10px 115px;
+}
+
+.logoImage{
+    width: 76px;
 }
