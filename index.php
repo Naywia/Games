@@ -13,6 +13,9 @@
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <body>
+        <!-- Include header -->
+        <?php include_once 'header.php'; ?>
+        
         <h1>Hello There!</h1>
         <p>This site is for a database over games</p><br><br>
     </body>
