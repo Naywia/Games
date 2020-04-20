@@ -3,6 +3,10 @@
     Author     : Naywia
 */
 
+html, body {
+    margin: 0;
+}
+
 /* Header for all pages */
 header {
     height: 50px;
