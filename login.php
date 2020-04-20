@@ -7,7 +7,7 @@ $password = mysqli_real_escape_string($conn,$_POST['password']);
 
 if ($email != "" && $password != ""){
 
-    $sql_query = "select count(*) as cntUser from users where username='".$email."' and password='".$password."'";
+    $sql_query = "select count(*) as cntUser from gdb_login where e_mail='".$email."' and password='".$password."'";
     $result = mysqli_query($conn,$sql_query);
     $row = mysqli_fetch_array($result);
 
