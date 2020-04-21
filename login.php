@@ -1,8 +1,5 @@
 <?php
 
-// Start a session
-session_start();
-
 include_once 'connection.php';
 
 $email = filter_input(INPUT_POST, "email");
@@ -15,16 +12,8 @@ if ($email != "" && $password != "") {
     $row = mysqli_fetch_array($result);
 
     $count = $row['cntUser'];
-    echo "Hello!";
     if ($count > 0) {
         $_SESSION['email'] = $email;
-        echo 1;
-    } else {
-        echo 0;
     }
-    header("Location: index.php");
+    header('Location: ../index.php');
 }
-
-$_SESSION['email'] = "HvadLaverDuMaya?";
-print_r($_SESSION);
-echo "Hello!";

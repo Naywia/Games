@@ -18,7 +18,9 @@ echo '
         </div>
         <div id="loginDiv">
         <form id="div_login" action="login.php" method="post">
-            <div id="message"></div>
+            <div id="message">
+            ' . $_SESSION["email"] . '
+            </div>
                 <label class="loginLabel">Email :</label>
                 <input type="text" name="email" id="email">
 
