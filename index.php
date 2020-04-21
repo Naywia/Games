@@ -19,7 +19,6 @@
 
         <h1>Hello There!</h1>
         <p>This site is for a database over games</p><br><br>
-        <a class="navLink" href="login.html">Login</a>
         
     </body>
 </html>
