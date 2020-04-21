@@ -16,11 +16,6 @@
         <!-- Include header -->
         <?php include_once 'header.php'; ?>
 
-        <!-- Navbar -->
-        <nav class="navbar">
-            <a class="navLink" href="index.php">Forside</a>
-            <a class="navLink" href="login.html">Login</a>
-        </nav>
 
         <h1>Hello There!</h1>
         <p>This site is for a database over games</p><br><br>
