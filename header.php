@@ -9,19 +9,15 @@ echo '
             <h1>Games Database</h1>
         </div>
         <div class="navLinks">
-            <div class="nav">
-                <a class="navLink" href="index.php">Home</a>
-            </div>
-            <div class="nav">
-                <a class="navLink" href="games.php">All Games</a>
-            </div>
+            <a class="navLink" href="index.php">Home</a>
+            <a class="navLink" href="games.php">All Games</a>
         </div>
         <div id="loginDiv">
-        <form id="div_login" action="login.php" method="post">
             <div id="message">
                 "Hello "' .
                 $_SESSION["email"] . ' 
             </div>
+            <form id="div_login" action="login.php" method="post">
                 <label class="loginLabel">Email :</label>
                 <input type="text" name="email" id="email">
 

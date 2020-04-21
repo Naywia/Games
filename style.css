@@ -7,18 +7,25 @@ html, body {
     margin: 0;
 }
 
-/* Header for all pages */
-header {
-    height: 50px;
+.navbar{
     display: flex;
-    align-items: center;
-    color: #000;
-    background-color: #ccc;
+    width: 100%;
+    background-color: #1f1f1f;
+    color: #fff;
 }
 
-/* The header contains three divs. One on the left, one with a title and one on the right to center everyhting else */
-.headerLeft, .headerRight {
-    flex: 1;
+.navbar a:hover{
+    font-weight: 900;
+}
+
+.imageContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.logoImage{
+    max-width: 75px;
 }
 
 .title {
@@ -35,55 +42,25 @@ header {
     font-size: 38px;
 }
 
-.navbar{
-    display: flex;
-    width: 100%;
-    background-color: #1f1f1f;
-}
-
 .navLinks{
     display: flex;
     float: right;
-    padding: 17px 35px 0px 0px;
+    align-items: center;
     width: 75%;
     justify-content: flex-end;
 }
 
-.navLinks a{
+.navLink{
     color: #fff;
     text-align: center;
-    padding: 0px 14px 3px 14px;
+    padding: 0px 15px 0px 15px;
     text-decoration: none;
     font-size: 17px;
     font-family: Verdana, Geneva, sans-serif;
-}
-
-.navbar a:hover{
-    font-weight: 900;
-}
-
-.navLink{
-    
-}
-
-.nav{
-    display: inline-block;
-    padding: 0 .25em;
-}
-
-.imageContainer{
-    display: flex;
-    align-content: center;
-    justify-content: flex-end;
-    width: 16%;
 }
 
 .loginDiv{
     width: 50%;
     color: #fff;
     align-self: center;
-}
-
-.logoImage{
-    width: 76px;
 }
