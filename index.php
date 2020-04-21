@@ -14,15 +14,17 @@ session_start();
         <link rel="icon" type="image/png" sizes="16x16" href="/../images/favicon/favicon-16x16.png">
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styleII.css">
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <body>
         <!-- Include header -->
-        <?php
-        include_once 'header.php';
-
+        <?php 
+        include_once 'connection.php';
+        include_once 'header.php'; 
         $sql = "
-            SELECT gameID, gameName, description, releaseDate, gameImage FROM gdb_games";
+            SELECT gameID, gameName, description, releaseDate, gameImage FROM gdb_games
+            ORDER BY releaseDate DESC LIMIT 5";
 
         $result = $conn->query($sql);
 
@@ -31,7 +33,7 @@ session_start();
         }
         ?>
 
-        <section id="projects" class="projectSection">
+        <section id="games" class="gameSection">
             <div class="container">
                 <h1>Most recent games</h1><br>
 
@@ -45,7 +47,8 @@ session_start();
                         $imageName = $row["gameImage"];
 
                         echo "
-                            <a class='' href='project.php?game=" . $gameID . "'>
+                        <div class='gameBox'>
+                            <a class='' href='game.php?game=" . $gameID . "'>
                                 <div class='gameImages'>
                                     <img class='gamePicture' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
                                     <div class='gameName'> 
@@ -59,10 +62,5 @@ session_start();
                 </div>
             </div>
         </section>
-
-        <?php
-        print_r($_SESSION);
-        echo "Hello!";
-        ?>
     </body>
 </html>
