@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php
+// Start a session
+session_start();
+?>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -15,10 +19,12 @@
     <body>
         <!-- Include header -->
         <?php include_once 'header.php'; ?>
-        
 
         <h1>Hello There!</h1>
         <p>This site is for a database over games</p><br><br>
 
+        <?php
+        print_r($_SESSION);
+        ?>
     </body>
 </html>

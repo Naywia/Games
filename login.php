@@ -15,7 +15,8 @@ if ($email != "" && $password != "") {
 
     if ($count > 0) {
         $_SESSION['email'] = $email;
+        echo 1;
     } else {
-        
+        echo 0;
     }
 }
