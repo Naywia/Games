@@ -1,4 +1,7 @@
 <?php
+if(!isset($_SESSION)){
+    session_start();
+}
 
 echo '
   <nav class="navbar">
@@ -13,17 +16,19 @@ echo '
             <a class="navLink" href="games.php">All Games</a>
         </div>
         <div id="loginDiv">
-            <div id="message">
+            <p id="message">
                 "Hello "' .
                 $_SESSION["email"] . ' 
-            </div>
-            <form id="div_login" action="login.php" method="post">
-                <label class="loginLabel">Email :</label>
-                <input type="text" name="email" id="email">
-
-                <label class="loginLabel">Password :</label>
-                <input type="password" name="password" id="password">
-
+            </p>
+            <form class="loginForm" action="login.php" method="post">
+                <div class="labels">
+                    <label for="email" class="loginLabel">Email :</label>
+                    <label for="password" class="loginLabel">Password :</label>
+                </div>
+                <div class="inputs">
+                    <input type="email" name="email" id="email">
+                    <input type="password" name="password" id="password">
+                </div>
                 <input type="submit" name="login" id="login" value="Login">
             </form>
         </div>
