@@ -117,7 +117,7 @@ html, body {
 .gamePicture{
     display: flex;
     width: 610px;
-    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
 }
 
 .gameName{
