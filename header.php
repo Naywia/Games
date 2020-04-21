@@ -10,10 +10,10 @@ echo '
         </div>
         <div class="navLinks">
             <div class="nav">
-                <a class="navLink" href="index.php">Hjem</a>
+                <a class="navLink" href="index.php">Home</a>
             </div>
             <div class="nav">
-                <a class="navLink" href="login.html">Login</a>
+                <a class="navLink" href="games.php">All Games</a>
             </div>
         </div>
         <div id="loginDiv">

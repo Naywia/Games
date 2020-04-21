@@ -78,6 +78,12 @@ header {
     width: 16%;
 }
 
+.loginDiv{
+    width: 50%;
+    color: #fff;
+    align-self: center;
+}
+
 .logoImage{
     width: 76px;
 }

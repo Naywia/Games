@@ -17,8 +17,7 @@
         <?php include_once 'header.php'; ?>
         
 
-        <h1>Hello There!</h1>
-        <p>This site is for a database over games</p><br><br>
+        <h1>Most recent games</h1><br>
 
     </body>
 </html>
