@@ -22,10 +22,7 @@ session_start();
         include_once 'header.php';
 
         $sql = "
-            SELECT gdb_games.gameID, gameName, description, releaseDate, genre FROM gdb_gameGenre 
-            INNER JOIN gdb_games ON gdb_gameGenre.gameID = gdb_games.gameID 
-            INNER JOIN gdb_genres ON gdb_gameGenre.genreID = gdb_genres.genreID 
-            ORDER BY releaseDate DESC LIMIT 5 ";
+            SELECT gameID, gameName, description, releaseDate, gameImage FROM gdb_games";
 
         $result = $conn->query($sql);
 
@@ -45,13 +42,14 @@ session_start();
                         $gameName = $row['gameName'];
                         $description = $row['description'];
                         $releaseDate = $row['releaseDate'];
+                        $imageName = $row["gameImage"];
 
                         echo "
                             <a class='' href='project.php?game=" . $gameID . "'>
                                 <div class='gameImages'>
-                                    <img class='projectPicture' src='/../images/games/" . $imageName . ".png' class='' alt='projectImage'>
-                                    <div class='projectName'> 
-                                        <h2> " . $projectName . " </h2>
+                                    <img class='gamePicture' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
+                                    <div class='gameName'> 
+                                        <h2> " . $gameName . " </h2>
                                     </div>
                                 </div>
                             </a>
