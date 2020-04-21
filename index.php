@@ -40,7 +40,7 @@ session_start();
                 <div class="galleryRow">
                     <?php
                     foreach ($data as $row) {
-                        $gameID = $row['gdb_games.gameID'];
+                        $gameID = $row['gameID'];
                         $gameName = $row['gameName'];
                         $description = $row['description'];
                         $releaseDate = $row['releaseDate'];
