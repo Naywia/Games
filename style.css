@@ -4,28 +4,30 @@
 */
 
 html, body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
 }
 
-.navbar{
+.navbar {
     display: flex;
     width: 100%;
     background-color: #1f1f1f;
     color: #fff;
 }
 
-.navbar a:hover{
+.navbar a:hover {
     font-weight: 900;
 }
 
-.imageContainer{
+.imageContainer {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 16%;
 }
 
-.logoImage{
+.logoImage {
     max-width: 75px;
 }
 
@@ -33,7 +35,6 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    color: #fff;
     width: 50%;
     padding: 0px 0px 0px 15px
 }
@@ -43,7 +44,7 @@ html, body {
     font-size: 38px;
 }
 
-.navLinks{
+.navLinks {
     display: flex;
     float: right;
     align-items: center;
@@ -51,7 +52,7 @@ html, body {
     justify-content: flex-end;
 }
 
-.navLink{
+.navLink {
     color: #fff;
     text-align: center;
     padding: 0px 15px 0px 15px;
@@ -60,8 +61,24 @@ html, body {
     font-family: Verdana, Geneva, sans-serif;
 }
 
-.loginDiv{
+#loginDiv {
     width: 50%;
-    color: #fff;
+    align-self: center;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: row;
+}
+
+.labels{
+    
+}
+
+.inputs {
+    
+}
+
+#login {
     align-self: center;
 }
