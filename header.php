@@ -17,7 +17,7 @@ echo '
         </div>
         <div id="loginDiv">
             <p id="message">
-                "Hello "' .
+                Hello ' .
                 $_SESSION["email"] . ' 
             </p>
             <form class="loginForm" action="login.php" method="post">
