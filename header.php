@@ -16,4 +16,18 @@ echo '
                 <a class="navLink" href="login.html">Login</a>
             </div>
         </div>
+        <div id="loginDiv">
+        <form id="div_login">
+            <div id="message"></div>
+            <div>    
+                <label class="loginLabel">Email :</label>
+                <input type="text" name="email" id="email">
+
+                <label class="loginLabel">Password :</label>
+                <input type="password" name="password" id="password">
+
+                <input type="button" name="login" id="login" value="Login">
+            </div>
+            </form>
+        </div>
     </nav>';
