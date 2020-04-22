@@ -3,37 +3,3 @@
     Author     : Naywia
 */
 
-.gameImage{
-    width: 600px;
-}
-
-#gameInfo{
-    display: flex;
-    flex-direction: column;
-}
-
-#game{
-    display: flex;
-}
-
-#heading{
-    flex: 1;
-    padding: 0px 0px 0px 50px
-}
-
-.indentGame{
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 20px 0px 0px;
-}
-
-#gameInfo p{
-    width: 600px;
-}
-
-.animate {
-  width: 800px;
-}
-.animateRevert {
-  width: 600px;
-}

@@ -14,7 +14,16 @@ echo '
             <a class="navLink" href="index.php">Home</a>
             <a class="navLink" href="games.php">All Games</a>
         </div>
-        <form class="loginForm" action="login.php" method="post">
+        <form class="loginForm" action="login.php" method="post">';
+if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+    echo'
+            <div class="inputs">
+                    <input type="submit" name="logout" id="logout" value="Logout">
+            </div>
+        </form>
+        <div class="loggedIn">';
+} else {
+    echo'
             <div class="inputs">
                 <label for="email" class="loginLabel">Email </label>
                 <input type="email" name="email" id="email">
@@ -27,7 +36,8 @@ echo '
                     <input type="submit" name="login" id="login" value="Login">
             </div>
         </form>
-        <div class="loggedIn">';
+<div class="loggedIn">';
+}
 
 if (isset($_SESSION['username'])) {
     echo $_SESSION['username'] . " is logged in";
