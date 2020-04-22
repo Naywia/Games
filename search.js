@@ -1,7 +1,7 @@
 $(function(){
   $("#search").on("keyup", function() {
     var value = $(this).val().toLowerCase();
-    $("#gallery *").filter(function() {
+    $("#gameGallery *").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
     });
   });

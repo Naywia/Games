@@ -89,6 +89,12 @@ html, body {
     
 }
 
+#gameGallery{
+    display: flex;   
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .gameGallery{
     display: flex;   
     flex-wrap: wrap;
@@ -110,6 +116,11 @@ html, body {
 .titles {
     font-size: 30px;
     font-weight: bold;
+    margin-left: 30px;
+}
+
+#search {
+    margin-left: 30px;
 }
 
 .gameBox{

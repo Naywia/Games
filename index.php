@@ -41,27 +41,26 @@ session_start();
         <section id="games" class="gameSection">
             <div class="container">
                 <h1 class="titles">Most recent games</h1>
-                <input id="search" type="text" placeholder="Search.."><br>
+                <input id="search" type="text" placeholder="Search..">
 
-                <div id="gallery">
-                    <div class="gameGallery">
-                        <?php
-                        foreach ($data as $row) {
-                            $gameID = $row['gameID'];
-                            $gameName = $row['gameName'];
-                            $description = $row['description'];
-                            $releaseDate = $row['releaseDate'];
-                            $imageName = $row["gameImage"];
+                <div id="gameGallery">
+                    <label>Hello!</label>
+                    <?php
+                    foreach ($data as $row) {
+                        $gameID = $row['gameID'];
+                        $gameName = $row['gameName'];
+                        $description = $row['description'];
+                        $releaseDate = $row['releaseDate'];
+                        $imageName = $row["gameImage"];
 
-                            echo "
+                        echo "
                             <a class='' href='game.php?game=" . $gameID . "'>
                                 <div class='gameImages'>
                                     <img class='gamePicture hvr-grow' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
                                 </div>
                             </a>";
-                        }
-                        ?>
-                    </div>
+                    }
+                    ?>
                 </div>
             </div>
         </section>

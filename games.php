@@ -17,6 +17,7 @@ session_start();
 
         <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="hover-min.css">
         <link rel="stylesheet" href="styleII.css">
 
         <!-- Js -->
@@ -41,7 +42,7 @@ session_start();
 
         <section id="games" class="gameSection">
             <div class="container">
-                <h1 class="titles">All games</h1><br>
+                <h1 class="titles">All games</h1>
 
                 <div class="gameGallery">
                     <?php
@@ -55,7 +56,7 @@ session_start();
                         echo "
                             <a class='' href='game.php?game=" . $gameID . "'>
                                 <div class='gameImages'>
-                                    <img class='gamePicture' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
+                                    <img class='gamePicture hvr-grow' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
                                 </div>
                             </a>";
                     }
