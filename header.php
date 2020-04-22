@@ -1,16 +1,6 @@
 <?php
-echo "Hello";
-if (!isset($_SESSION)) {
-    session_start();
-    $_SESSION['previous_location'] = $_SERVER['PHP_SELF'];
-    $_SESSION["email"];
-    print_r($_SESSION);
-}
-//
-//            <p id="message">
-//                Hello ' .
-//                $_SESSION["email"] . ' 
-//            </p>
+
+$_SESSION['previous_location'] = $_SERVER['PHP_SELF'];
 echo '
   <nav class="navbar">
         <div class="imageContainer">
@@ -37,5 +27,6 @@ echo '
             </div>
         </form>
         <div class="imageContainer">
+        ' . print_r($_SESSION) . '
         </div>
     </nav>';
