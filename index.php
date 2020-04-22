@@ -9,15 +9,19 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/../images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/../images/favicon/favicon-16x16.png">
 
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styleII.css">
+
+        <!-- Js -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="search.js"></script>
     </head>
     <body>
         <!-- Include header -->
-        <?php 
+        <?php
         include_once 'connection.php';
-        include_once 'header.php'; 
+        include_once 'header.php';
         $sql = "
             SELECT gameID, gameName, description, releaseDate, gameImage FROM gdb_games
             ORDER BY releaseDate DESC LIMIT 5";
@@ -31,32 +35,32 @@
 
         <section id="games" class="gameSection">
             <div class="container">
-                <h1>Most recent games</h1><br>
+                <h1 class="titles">Most recent games</h1>
+                <input id="search" type="text" placeholder="Search.."><br>
 
-                <div class="galleryRow">
-                    <?php
-                    foreach ($data as $row) {
-                        $gameID = $row['gameID'];
-                        $gameName = $row['gameName'];
-                        $description = $row['description'];
-                        $releaseDate = $row['releaseDate'];
-                        $imageName = $row["gameImage"];
+                <div id="gallery">
+                    <div class="gameGallery">
+                        <?php
+                        foreach ($data as $row) {
+                            $gameID = $row['gameID'];
+                            $gameName = $row['gameName'];
+                            $description = $row['description'];
+                            $releaseDate = $row['releaseDate'];
+                            $imageName = $row["gameImage"];
 
-                        echo "
-                        <div class='gameBox'>
+                            echo "
                             <a class='' href='game.php?game=" . $gameID . "'>
                                 <div class='gameImages'>
                                     <img class='gamePicture' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
-                                    <div class='gameName'> 
-                                        <h2> " . $gameName . " </h2>
-                                    </div>
                                 </div>
-                            </a>
-                        </div>";
-                    }
-                    ?>
+                            </a>";
+                        }
+                        ?>
+                    </div>
                 </div>
             </div>
         </section>
+
+
     </body>
 </html>

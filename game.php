@@ -13,7 +13,9 @@ session_start();
         <link rel="icon" type="image/png" sizes="32x32" href="/../images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/../images/favicon/favicon-16x16.png">
 
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="styleII.css">
     </head>
     <body>
         <!-- Include header -->
@@ -45,12 +47,18 @@ session_start();
         }
 
         echo
-        "<div>
-            <h1>" . $gameName . "</h1><br>" .
-        $releaseDate . "<br>
-            <img class='projectImage' src='/../images/games/" . $imageName . ".png'><br>" .
-        $description .
-        "</div>";
+        "<div id='game'>
+            <div>
+                <h1>" . $gameName . "</h1><br>
+            </div>   
+            <div id='gameInfo'>
+                <div>
+                    <img class='gameImage' src='/../images/games/" . $imageName . ".png'><br>
+                </div>" 
+                
+                . $description ."
+            </div>
+        </div>";
         ?>
 
 
