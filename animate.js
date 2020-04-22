@@ -1,4 +1,4 @@
-function animateButton() {
+function animatePicture() {
   var button = $('.gameImage');
   if (button.hasClass('animate')) {
     button.removeClass('animate').addClass('animateRevert');
@@ -11,6 +11,6 @@ function animateButton() {
 
 $(function() {
   $('.gameImage').on("click", function() {
-    animateButton();
+    animatePicture();
   });
 });

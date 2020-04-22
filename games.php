@@ -44,7 +44,7 @@ session_start();
             <div class="container">
                 <h1 class="titles">All games</h1>
 
-                <div class="gameGallery">
+                <div id="gameGallery">
                     <?php
                     foreach ($data as $row) {
                         $gameID = $row['gameID'];
