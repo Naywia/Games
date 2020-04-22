@@ -1,6 +1,7 @@
 <?php
 
 $_SESSION['previous_location'] = $_SERVER['PHP_SELF'];
+
 echo '
   <nav class="navbar">
         <div class="imageContainer">
@@ -26,7 +27,13 @@ echo '
                     <input type="submit" name="login" id="login" value="Login">
             </div>
         </form>
-        <div class="imageContainer">
-        ' . print_r($_SESSION) . '
-        </div>
+        <div class="loggedIn">';
+
+if (isset($_SESSION['username'])) {
+    echo $_SESSION['username'] . " is logged in";
+} else if (!isset($_SESSION['username'])) {
+    
+}
+
+echo '</div>
     </nav>';

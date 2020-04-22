@@ -20,6 +20,11 @@ if ($email != "" && $password != "") {
     $count = $row['cntUser'];
     if ($count > 0) {
         $_SESSION['email'] = $email;
+        if ($_SESSION['email'] == "maya@wettendorff.com") {
+            $_SESSION['username'] = "Maya";
+        } else if ($_SESSION['email'] == "rasmus.norby@gmail.com") {
+            $_SESSION['username'] = "Admin";
+        }
     }
 }
 

@@ -66,6 +66,13 @@ html, body {
     align-items: center;
 }
 
+.loggedIn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16%;
+}
+
 .labels{
     
 }
