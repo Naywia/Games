@@ -41,7 +41,7 @@ session_start();
 
         <section id="games" class="gameSection">
             <div class="container">
-                <h1 class="titles">All games</h1><br>
+                <h1 class="titles">All games</h1>
 
                 <div class="gameGallery">
                     <?php
