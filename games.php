@@ -9,14 +9,20 @@
         <link rel="icon" type="image/png" sizes="32x32" href="/../images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/../images/favicon/favicon-16x16.png">
 
+
+        <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styleII.css">
+
+        <!-- Js -->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="search.js"></script>
     </head>
     <body>
         <!-- Include header -->
-        <?php 
+        <?php
         include_once 'connection.php';
-        include_once 'header.php'; 
+        include_once 'header.php';
         $sql = "
             SELECT gameID, gameName, description, releaseDate, gameImage FROM gdb_games
             ORDER BY releaseDate DESC";
@@ -30,9 +36,9 @@
 
         <section id="games" class="gameSection">
             <div class="container">
-                <h1>All games</h1><br>
+                <h1 class="titles">All games</h1><br>
 
-                <div class="galleryRow">
+                <div class="gameGallery">
                     <?php
                     foreach ($data as $row) {
                         $gameID = $row['gameID'];
@@ -45,9 +51,6 @@
                             <a class='' href='game.php?game=" . $gameID . "'>
                                 <div class='gameImages'>
                                     <img class='gamePicture' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
-                                    <div class='gameName'> 
-                                        <h2> " . $gameName . " </h2>
-                                    </div>
                                 </div>
                             </a>";
                     }

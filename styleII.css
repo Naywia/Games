@@ -3,3 +3,17 @@
     Author     : Naywia
 */
 
+.gameImage{
+    width: 600px;
+}
+
+.gameInfo{
+    display: flex;
+    flex: 1;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.game{
+    display: flex;
+}
