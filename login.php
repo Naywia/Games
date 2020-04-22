@@ -35,4 +35,4 @@ if (isset($login)) {
 }
 
 
-header('Location: ../' . $_SESSION['previous_location']);
+header('Location: ..' . $_SESSION['previous_location']);
