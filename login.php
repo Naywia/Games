@@ -1,5 +1,13 @@
 <?php
 
+if (!isset($_SESSION)) {
+    session_start();
+}
+
+//if (!isset($_SESSION['previous_location'])) {
+//    $_SESSION['previous_location'] = 'index.php';
+//}
+
 include_once 'connection.php';
 
 $email = filter_input(INPUT_POST, "email");
@@ -16,4 +24,5 @@ if ($email != "" && $password != "") {
         $_SESSION['email'] = $email;
     }
 }
-header('Location: ../index.php');
+//header('Location: ..' . $_SESSION['previous_location']);
+echo "Hello " . $_SESSION['previous_location'] . " there!";

@@ -1,8 +1,16 @@
 <?php
-if(!isset($_SESSION)){
+echo "Hello";
+if (!isset($_SESSION)) {
     session_start();
+    $_SESSION['previous_location'] = $_SERVER['PHP_SELF'];
+    $_SESSION["email"];
+    print_r($_SESSION);
 }
-
+//
+//            <p id="message">
+//                Hello ' .
+//                $_SESSION["email"] . ' 
+//            </p>
 echo '
   <nav class="navbar">
         <div class="imageContainer">
@@ -15,21 +23,19 @@ echo '
             <a class="navLink" href="index.php">Home</a>
             <a class="navLink" href="games.php">All Games</a>
         </div>
-        <div id="loginDiv">
-            <p id="message">
-                Hello ' .
-                $_SESSION["email"] . ' 
-            </p>
-            <form class="loginForm" action="login.php" method="post">
-                <div class="labels">
-                    <label for="email" class="loginLabel">Email :</label>
-                    <label for="password" class="loginLabel">Password :</label>
-                </div>
-                <div class="inputs">
-                    <input type="email" name="email" id="email">
-                    <input type="password" name="password" id="password">
-                </div>
-                <input type="submit" name="login" id="login" value="Login">
-            </form>
+        <form class="loginForm" action="login.php" method="post">
+            <div class="inputs">
+                <label for="email" class="loginLabel">Email </label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="inputs">
+                <label for="password" class="loginLabel">Password </label>
+                <input type="password" name="password" id="password">
+            </div>
+            <div class="inputs">
+                    <input type="submit" name="login" id="login" value="Login">
+            </div>
+        </form>
+        <div class="imageContainer">
         </div>
     </nav>';
