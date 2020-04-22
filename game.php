@@ -5,7 +5,9 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Meta tags -->
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Games</title>
 
         <!-- Site Icons -->
@@ -16,6 +18,10 @@ session_start();
         <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styleII.css">
+        
+        <!-- Js -->
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="animate.js"></script>
     </head>
     <body>
         <!-- Include header -->
@@ -23,7 +29,8 @@ session_start();
         include_once 'connection.php';
         include_once 'header.php';
 
-        $game = $_GET['game'];
+        $genre = array();
+        $game = filter_input(INPUT_GET, game);
 
         $sql = "
             SELECT gdb_games.gameID, gameName, description, releaseDate, gameImage, genre FROM gdb_gameGenre 
@@ -39,24 +46,39 @@ session_start();
                 $gameName = $row['gameName'];
                 $description = $row['description'];
                 $releaseDate = $row['releaseDate'];
-                $genre = $row["genre"];
+                array_push($genre, $row["genre"]);
                 $imageName = $row["gameImage"];
             }
         } else {
             
         }
 
+        $genreCount = count($genre);
         echo
         "<div id='game'>
-            <div>
+            <div id='heading'>
                 <h1>" . $gameName . "</h1><br>
             </div>   
             <div id='gameInfo'>
-                <div>
+                <div class='indentGame'>
                     <img class='gameImage' src='/../images/games/" . $imageName . ".png'><br>
-                </div>" 
-                
-                . $description ."
+                </div>
+                <p>" . $description . "</p>
+               <p> Genres: ";
+        for ($i = 0; $i < $genreCount; $i++) {
+            if ($genreCount > 1) {
+                if ($i == 0){
+                    echo $genre[$i] . ", ";
+                } else if($i == 1){
+                    echo $genre[$i];
+                }
+            } else {
+                echo $genre[$i];
+            }
+        }
+        echo "
+            </p>
+                <p> Release date: " . $releaseDate . " </p>   
             </div>
         </div>";
         ?>
