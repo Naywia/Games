@@ -4,6 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset="UTF-8">
         <title>Games</title>
 
@@ -14,6 +15,7 @@ session_start();
 
         <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="hover-min.css">
         <link rel="stylesheet" href="styleII.css">
 
         <!-- Js -->
@@ -54,7 +56,7 @@ session_start();
                             echo "
                             <a class='' href='game.php?game=" . $gameID . "'>
                                 <div class='gameImages'>
-                                    <img class='gamePicture' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
+                                    <img class='gamePicture hvr-grow' src='/../images/games/" . $imageName . ".png' class='' alt='gameImage'>
                                 </div>
                             </a>";
                         }
