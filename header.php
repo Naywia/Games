@@ -1,6 +1,6 @@
 <?php
 
-$_SESSION['previous_location'] = $_SERVER['PHP_SELF'];
+$_SESSION['previous_location'] = filter_input(INPUT_SERVER, 'PHP_SELF');
 
 echo '
   <nav class="navbar">

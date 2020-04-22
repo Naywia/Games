@@ -18,7 +18,7 @@ session_start();
         <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styleII.css">
-        
+
         <!-- Js -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <script src="animate.js"></script>
@@ -28,7 +28,10 @@ session_start();
         <?php
         include_once 'connection.php';
         include_once 'header.php';
+        ?>
+        <a href="javascript:history.go(-1)">Go back</a>
 
+        <?php
         $genre = array();
         $game = filter_input(INPUT_GET, game);
 
@@ -54,6 +57,8 @@ session_start();
         }
 
         $genreCount = count($genre);
+
+
         echo
         "<div id='game'>
             <div id='heading'>
@@ -67,9 +72,9 @@ session_start();
                <p> Genres: ";
         for ($i = 0; $i < $genreCount; $i++) {
             if ($genreCount > 1) {
-                if ($i == 0){
+                if ($i == 0) {
                     echo $genre[$i] . ", ";
-                } else if($i == 1){
+                } else if ($i == 1) {
                     echo $genre[$i];
                 }
             } else {
