@@ -39,7 +39,6 @@ session_start();
 
         <div class="container">
             <h1 class="titles">Most recent games</h1>
-            <input id="search" type="text" placeholder="Search..">
             <section id="games" class="gameSection">
 
                 <div id="gameGallery">
