@@ -179,6 +179,13 @@ html, body {
 }
 
 
+/*--------------------------------------GAME----------------------------------*/
+#displayWeather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /*---------------------------------MEDIA TAGS---------------------------------*/
 @media (max-width: 900px) {

@@ -25,20 +25,27 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-        include_once 'header.php';
-        // Initialize a curl resource. The URL can also be specified here
-        $curl = curl_init();
+            include_once 'header.php';
+        ?>
+        <div id="displayWeather">
+            <?php
+            // Initialize a curl resource. The URL can also be specified here
+            $curl = curl_init();
 
-        // Set the curl options to be the curl resource, the setting and the value
-        // CURLOPT_URL simply specifies that the URL is being changed.
-        // After the city name, mode can be added to change how the data is displayed.
-        curl_setopt($curl, CURLOPT_URL, 'https://api.openweathermap.org/data/2.5/weather?q=fredericia,dk&mode=html&appid=69187b1a3be7430370c6e6fdd5d0c496');
-        
-        // Execute the curl
-        $result = curl_exec($curl);
+            // Set the curl options to be the curl resource, the setting and the value
+            // CURLOPT_URL simply specifies that the URL is being changed.
+            // After the city name, mode can be added to change how the data is displayed.
+            curl_setopt($curl, CURLOPT_URL, 'https://api.openweathermap.org/data/2.5/weather?q=fredericia,dk&mode=html&appid=69187b1a3be7430370c6e6fdd5d0c496');
 
-        // Close the curl object
-        curl_close($curl);
+            // Execute the curl
+            $result = curl_exec($curl);
+
+            // Close the curl object
+            curl_close($curl);
+            ?>
+        </div>
+        <?php
+            include_once 'footer.php';
         ?>
     </body>
 </html>
