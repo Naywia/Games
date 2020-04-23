@@ -25,10 +25,8 @@ and open the template in the editor.
     </head>
     <body>
         <div id="app">
-            {{ message }}
+            <img v-bind:src="myImage" v-bind:title="message"/>
         </div>
-
-        <img id="img">
 
         <div id="app-2">
             <span v-bind:title="message">
@@ -40,26 +38,20 @@ and open the template in the editor.
         // put your code here
         ?>
         <script>
-var app = new Vue({
-    el: '#app',
-    data: {
-        message: 'images/games/spyro.png'
-    }
-})
+            var app = new Vue({
+                el: '#app',
+                data: {
+                    myImage: "images/games/spyro.png",
+                    message: "Spyro"
+                }
+            });
 
-var imgChange = new Vue({
-    el: '#img',
-    data: {
-        src: 'images/games/spyro.png'
-    }
-})
-
-var app2 = new Vue({
-    el: '#app-2',
-    data: {
-        message: 'You loaded this page on ' + new Date().toLocaleString()
-    }
-})
+            var app2 = new Vue({
+                el: '#app-2',
+                data: {
+                    message: 'You loaded this page on ' + new Date().toLocaleString()
+                }
+            });
         </script>
     </body>
 </html>
