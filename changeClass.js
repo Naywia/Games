@@ -1,9 +1,9 @@
 
 function changeClass() {
     var div = $('#logged');
-  if (div.hasClass('loggedIn')) {
-    div.removeClass('loggedIn').addClass('loggedOut');
-};
+    if (div.hasClass('loggedIn')) {
+        div.removeClass('loggedIn').addClass('loggedOut');
+    };
 //    document.getElementById("logged").className = "loggedIn";
 };
 
