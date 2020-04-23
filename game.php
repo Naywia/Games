@@ -29,7 +29,7 @@ session_start();
         include_once 'connection.php';
         include_once 'header.php';
         ?>
-        <a href="javascript:history.go(-1)">Go back</a>
+
 
         <?php
         $genre = array();
@@ -62,7 +62,11 @@ session_start();
         echo
         "<div id='game'>
             <div id='heading'>
-                <h1>" . $gameName . "</h1><br>
+                <h1>" . $gameName . "</h1>";
+        ?>
+        <a href="javascript:history.go(-1)">Go back</a>
+        <?php
+        echo "
             </div>   
             <div id='gameInfo'>
                 <div class='indentGame'>
@@ -88,6 +92,6 @@ session_start();
         </div>";
         ?>
 
-
+<?php include_once 'footer.php'; ?>
     </body>
 </html>

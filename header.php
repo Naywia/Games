@@ -13,6 +13,7 @@ echo '
         <div class="navLinks">
             <a class="navLink" href="index.php">Home</a>
             <a class="navLink" href="games.php">All Games</a>
+            <a class="navLink" href="weather.php">Weather</a>
         </div>
         <form class="loginForm" action="login.php" method="post">';
 if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
@@ -21,7 +22,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                     <input type="submit" name="logout" id="logout" value="Logout">
             </div>
         </form>
-        <div class="loggedIn">';
+        <div id="logged" class="loggedIn">';
 } else {
     echo'
             <div class="inputs">

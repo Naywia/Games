@@ -21,6 +21,7 @@ session_start();
         <!-- Js -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <script src="search.js"></script>
+        <?php include_once 'changeClass.php'; ?>
     </head>
     <body>
         <!-- Include header -->
@@ -64,7 +65,7 @@ session_start();
                 </div>
             </div>
         </section>
-
+        <?php include_once 'footer.php'; ?>
 
     </body>
 </html>
