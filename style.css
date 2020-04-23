@@ -79,7 +79,7 @@ html, body {
 }
 
 .labels{
-    
+
 }
 
 .inputs {
@@ -91,7 +91,9 @@ html, body {
 }
 
 #login {
-    
+    border-radius: 5px;
+    border-style: solid;
+    background: white;
 }
 
 
@@ -104,7 +106,7 @@ html, body {
 }
 
 .container{
-    
+
 }
 
 .gameSection{
@@ -170,10 +172,10 @@ html, body {
 }
 
 .animate {
-  width: 800px;
+    width: 800px;
 }
 .animateRevert {
-  width: 600px;
+    width: 600px;
 }
 
 
@@ -186,5 +188,5 @@ html, body {
 }
 
 @media (max-width: 620px) {
-    
+
 }
