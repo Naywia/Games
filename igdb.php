@@ -19,6 +19,7 @@ session_start();
 
         <!-- Js -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     </head>
     <body>
         <?php
@@ -42,7 +43,6 @@ session_start();
                             .catch(err => {
                                 console.error(err);
                             });
-                    fields * ; where id = 1942;
                 </script>
             </div>
         </div>
