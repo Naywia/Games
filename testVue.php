@@ -42,9 +42,7 @@ and open the template in the editor.
                         </thead>
                         <tbody>
                             <tr v-for="item in resultQuery">
-                                <td><a v-bind:href="item.uri" target="_blank">{{item.icon}}</a>
-                                    <img v-bind:src="{{item.icon}}" >
-                                </td>
+                                <td><a v-bind:href="item.uri" target="_blank">{{item.icon}}</a></td>
                             </tr>
                         </tbody>
                     </table>

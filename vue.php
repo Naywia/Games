@@ -27,9 +27,9 @@ and open the template in the editor.
         <div id="app">
             {{ message }}
         </div>
-        <div id="app">
-            <img id="img" src="'{{ message }}'">
-        </div>
+
+        <img id="img">
+
         <div id="app-2">
             <span v-bind:title="message">
                 Hover your mouse over me for a few seconds
@@ -44,6 +44,13 @@ var app = new Vue({
     el: '#app',
     data: {
         message: 'images/games/spyro.png'
+    }
+})
+
+var imgChange = new Vue({
+    el: '#img',
+    data: {
+        src: 'images/games/spyro.png'
     }
 })
 
