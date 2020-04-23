@@ -40,9 +40,9 @@ session_start();
         }
         ?>
 
-        <section id="games" class="gameSection">
-            <div class="container">
-                <h1 class="titles">All games</h1>
+        <div class="container">
+            <h1 class="titles">All games</h1>
+            <section id="games" class="gameSection">
 
                 <div id="gameGallery">
                     <?php
@@ -62,9 +62,9 @@ session_start();
                     }
                     ?>
                 </div>
-            </div>
-        </section>
-        
+            </section>
+        </div>
+
         <?php include_once 'footer.php'; ?>
     </body>
 </html>
