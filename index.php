@@ -39,10 +39,10 @@ session_start();
         }
         ?>
 
-        <section id="games" class="gameSection">
-            <div class="container">
-                <h1 class="titles">Most recent games</h1>
-                <input id="search" type="text" placeholder="Search..">
+        <div class="container">
+            <h1 class="titles">Most recent games</h1>
+            <input id="search" type="text" placeholder="Search..">
+            <section id="games" class="gameSection">
 
                 <div id="gameGallery">
                     <label>Hello!</label>
@@ -63,8 +63,8 @@ session_start();
                     }
                     ?>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
         <?php include_once 'footer.php'; ?>
 
     </body>
