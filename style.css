@@ -184,7 +184,7 @@ html, body {
     padding: 0px 0px 0px 50px
 }
 
-#heading a {
+/*#heading a {
     color: #1f1f1f;
     text-decoration: none;
 }
@@ -201,6 +201,44 @@ html, body {
 
 #heading a:active {
     color: #1f1f1f;
+}*/
+
+.goBack {
+    display: inline-block;
+    border-radius: 20px;
+    background-color: #2e8b57;
+    background-image: linear-gradient(to right, #3aae6d, #256f46);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+.goBack span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.goBack span:after {
+    content: '\00ab';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.goBack:hover span {
+    padding-right: 15px;
+}
+
+.goBack:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 .indentGame{

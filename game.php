@@ -64,7 +64,7 @@ session_start();
             <div id='heading'>
                 <h1>" . $gameName . "</h1>";
         ?>
-        <a href="javascript:history.go(-1)">Go back</a>
+        <a class="goBack" href="javascript:history.go(-1)"><span>Go back </span></a>
         <?php
         echo "
             </div>   
