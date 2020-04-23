@@ -33,13 +33,13 @@ session_start();
 
             // Setting up the query parameters
             $options = array(
-                'search' => 'uncharted', // searching for games LIKE uncharted
+                'search' => 'sims', // searching for games LIKE uncharted
                 'fields' => array(// we want to see these values in the results
                     'id',
                     'name',
                     'cover'
                 ),
-                'limit' => 5, // we only need maximum 5 results per query (pagination)
+                'limit' => 10, // we only need maximum 5 results per query (pagination)
                 'offset' => 10           // we would like to show the third page; fetch the results from the tenth element (pagination)
             );
 
@@ -47,14 +47,24 @@ session_start();
                 // Running the query against IGDB; passing the options parameter
                 $result = $IGDB->game($options);
 
+                $resCount = count($result);
+
+                for ($i = 0; $i < $resCount; $i++) {
+                    echo $result[$i]->name;
+                    echo "<br>";
+                }
+
                 // Showing the result
-                var_dump($result);
             } catch (Exception $e) {
                 // Catching Exceptions, if there is any
                 echo $e->getMessage();
             }
             ?>
+
         </div>
+
+
+
         <?php
         include_once 'footer.php';
         ?>
