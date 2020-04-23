@@ -1,12 +1,9 @@
-<?php
-session_start();
-?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset="UTF-8">
-        <title>Gamea</title>
+        <title>Vue</title>
 
         <!-- Site Icons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/../images/favicon/apple-touch-icon.png">
@@ -37,7 +34,7 @@ session_start();
         }
         ?>
         <div class="container">
-            <h1 class="titles">All games</h1>
+            <h1 class="titles">Most recent games</h1>
             <section id="games" class="gameSection">
 
                 <div id="app">
