@@ -1,11 +1,11 @@
 function animatePicture() {
-  var button = $('.gameImage');
-  if (button.hasClass('animate')) {
-    button.removeClass('animate').addClass('animateRevert');
-  } else if (button.hasClass('animateRevert')) {
-    button.removeClass('animateRevert').addClass('animate');
+  var image = $('.gameImage');
+  if (image.hasClass('animate')) {
+    image.removeClass('animate').addClass('animateRevert');
+  } else if (image.hasClass('animateRevert')) {
+    image.removeClass('animateRevert').addClass('animate');
   } else {
-    button.addClass('animate');
+    image.addClass('animate');
   }
 };
 

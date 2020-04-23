@@ -22,7 +22,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                     <input type="submit" name="logout" id="logout" value="Logout">
             </div>
         </form>
-        <div id="logged" class="loggedIn">';
+        <div id="logged" class="loggedOut">';
 } else {
     echo'
             <div class="inputs">
@@ -37,7 +37,7 @@ if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
                     <input type="submit" name="login" id="login" value="Login">
             </div>
         </form>
-<div class="loggedIn">';
+<div class="loggedOut">';
 }
 
 if (isset($_SESSION['username'])) {
