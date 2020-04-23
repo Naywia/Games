@@ -27,6 +27,8 @@ if (isset($login)) {
                 $_SESSION['username'] = "Maya";
             } else if ($_SESSION['email'] == "rasmus.norby@gmail.com") {
                 $_SESSION['username'] = "Rasmus";
+            } else {
+                $_SESSION['username'] = "Person";
             }
         }
     }

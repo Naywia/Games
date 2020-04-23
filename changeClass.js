@@ -1,14 +1,14 @@
 
 function changeClass() {
     var div = $('#logged');
-    if (div.hasClass('loggedIn')) {
-        div.removeClass('loggedIn').addClass('loggedOut');
+    if (div.hasClass('loggedOut')) {
+        div.removeClass('loggedOut').addClass('loggedIn');
     };
 //    document.getElementById("logged").className = "loggedIn";
 };
 
 $(function () {
-    $('#login').on("click", function () {
+    $('#login').click(function () {
         changeClass();
     });
 });
