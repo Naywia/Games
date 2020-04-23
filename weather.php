@@ -16,7 +16,6 @@ session_start();
 
         <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="styleII.css">
 
         <!-- Js -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>

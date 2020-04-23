@@ -14,7 +14,6 @@ session_start();
         <link rel="icon" type="image/png" sizes="32x32" href="/../images/favicon/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="/../images/favicon/favicon-16x16.png">
 
-
         <!-- Stylesheet -->
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="hover-min.css">
