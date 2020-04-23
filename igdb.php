@@ -26,7 +26,7 @@ session_start();
         ?>
         <div class="container">
             <?php
-            require '../class.igdb.php';
+            require 'class.igdb.php';
 
             // Instantiate the class
             $IGDB = new IGDB('11e397ad4373da726e6ddc5ff1d88c13');
