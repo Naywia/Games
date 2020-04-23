@@ -8,6 +8,7 @@ html, body {
     flex-direction: column;
     margin: 0;
     font-family: Verdana, Geneva, sans-serif;
+    background-color: #CDCDCD;
 }
 
 /*------------------------------------NAVBAR----------------------------------*/
