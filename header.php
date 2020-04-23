@@ -16,7 +16,7 @@ echo '
             <a class="navLink" href="weather.php">Weather</a>
         </div>
         <form class="loginForm" action="login.php" method="post">';
-if (isset($_SESSION['username']) && !empty($_SESSION['username'])) {
+if (isset($_SESSION['username'])) {
     echo'
             <div class="inputs">
                     <input type="submit" name="logout" id="logout" value="Logout">
