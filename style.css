@@ -4,8 +4,10 @@
 */
 
 html, body {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
+    flex: 1;
     margin: 0;
     font-family: Verdana, Geneva, sans-serif;
     background-color: #CDCDCD;
@@ -74,8 +76,13 @@ html, body {
 .loggedIn {
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 16%;
+    justify-content: flex-start;
+    width: 10%;
+}
+
+.loggedOut {
+    display: flex;
+    width: 2%;
 }
 
 .labels{
@@ -94,6 +101,14 @@ html, body {
     border-radius: 5px;
     border-style: solid;
     background: white;
+}
+
+#logout {
+    display: flex;
+    border-radius: 5px;
+    border-style: solid;
+    background: white;
+    margin: 0px 15px 8px 0px;
 }
 
 
@@ -154,11 +169,31 @@ html, body {
 
 #game{
     display: flex;
+    flex: 1;
 }
 
 #heading{
     flex: 1;
     padding: 0px 0px 0px 50px
+}
+
+#heading a {
+  color: #1f1f1f;
+  text-decoration: none;
+}
+
+#heading a:visited {
+  color: #1f1f1f;
+}
+
+#heading a:hover {
+  color: #1f1f1f;
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#heading a:active {
+  color: #1f1f1f;
 }
 
 .indentGame{
@@ -185,6 +220,59 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+/*------------------------------------FOOTER----------------------------------*/
+#footer {
+    display: flex;
+    background-color: #1f1f1f;
+    left: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+    z-index: 2;
+    
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+.footerLeft {
+    display: flex;
+    justify-content: flex-start;
+    padding: 17px 0px;
+    width: 50%;
+}
+.footerRight{
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 0;
+    width: 50%;
+}
+
+.footerLinks {
+    margin: 0 0 0;
+    color: #2e8b57;
+    text-transform: uppercase;
+    padding: 0;
+}
+
+.footerLinks a {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 300;
+    margin: 0 10px 0 0;
+    color: #fff;
+    padding: 0;
+}
+
+
+.footerLinks a:hover{
+    color: #2e8b57;
+}
+    
 
 
 /*---------------------------------MEDIA TAGS---------------------------------*/
