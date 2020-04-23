@@ -13,6 +13,7 @@ echo '
         <div class="navLinks">
             <a class="navLink" href="index.php">Home</a>
             <a class="navLink" href="games.php">All Games</a>
+            <a class="navLink" href="igdb.php">IGDB</a>
             <a class="navLink" href="weather.php">Weather</a>
         </div>
         <form class="loginForm" action="login.php" method="post">';
