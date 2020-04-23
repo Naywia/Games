@@ -23,6 +23,7 @@ session_start();
         <!-- Js -->
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         <script src="search.js"></script>
+        <script src="changeClass.js"></script>
     </head>
     <body>
         <!-- Include header -->
