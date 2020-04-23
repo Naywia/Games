@@ -5,8 +5,10 @@ session_start();
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- Meta tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta charset="UTF-8">
+        
         <title>Games</title>
 
         <!-- Site Icons -->
@@ -22,21 +24,27 @@ session_start();
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
     </head>
     <body>
-        <!-- Include header -->
+        <!-- Include header and connection to database -->
         <?php
         include_once 'connection.php';
         include_once 'header.php';
+        
+        // SQL Query.
         $sql = "
             SELECT gameID, gameName, description, releaseDate, gameImage FROM gdb_games
-            ORDER BY releaseDate DESC LIMIT 5";
+            ORDER BY releaseDate DESC LIMIT 6";
 
+        // Execute query.
         $result = $conn->query($sql);
 
+        // While there's a row.
         while ($row = mysqli_fetch_array($result)) {
+            // Fill an array with the rows.
             $data[] = $row;
         }
         ?>
 
+        <!-- Print the data -->
         <div class="container">
             <h1 class="titles">Most recent games</h1>
             <section id="games" class="gameSection">
@@ -61,6 +69,8 @@ session_start();
                 </div>
             </section>
         </div>
+        
+        <!-- Include footer -->
         <?php include_once 'footer.php'; ?>
     </body>
 </html>

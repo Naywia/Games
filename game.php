@@ -23,7 +23,7 @@ session_start();
         <script src="animate.js"></script>
     </head>
     <body>
-        <!-- Include header -->
+        <!-- Include header  and connection to database -->
         <?php
         include_once 'connection.php';
         include_once 'header.php';
@@ -31,20 +31,37 @@ session_start();
 
 
         <?php
+        // Create Array.
         $genre = array();
+        // Get ID for game.
         $game = filter_input(INPUT_GET, game);
 
+        // Set session variable for game so that'll remember when you reload page.
+        if (!isset($_SESSION['game'])) {
+            $_SESSION['game'] = $game;
+        } else if (isset($_SESSION['game'])) {
+            if ($game == "" || $game == null) {
+                
+            } else {
+                $_SESSION['game'] = $game;
+            }
+        }
+
+        // SQL Query.
         $sql = "
             SELECT gdb_games.gameID, gameName, description, releaseDate, gameImage, genre FROM gdb_gameGenre 
             INNER JOIN gdb_games ON gdb_gameGenre.gameID = gdb_games.gameID 
             INNER JOIN gdb_genres ON gdb_gameGenre.genreID = gdb_genres.genreID
-            WHERE gdb_games.gameID = " . $game;
+            WHERE gdb_games.gameID = " . $_SESSION['game'];
 
+        // Run query.
         $result = $conn->query($sql);
 
-
+        // If there's more than 0 results.
         if (mysqli_num_rows($result) > 0) {
+            // While there's a row.
             while ($row = mysqli_fetch_array($result)) {
+                // Make the variables for showing the game.
                 $gameName = $row['gameName'];
                 $description = $row['description'];
                 $releaseDate = $row['releaseDate'];
@@ -55,16 +72,20 @@ session_start();
             
         }
 
+        // Count the array.
         $genreCount = count($genre);
 
 
+        // Print the data
         echo
         "<div id='game'>
             <div id='heading'>
                 <h1>" . $gameName . "</h1>";
         ?>
+        <!-- Go back button -->
         <a class="goBack" href="javascript:history.go(-1)"><span>Go back </span></a>
         <?php
+        // Continue to print the data.
         echo "
             </div>   
             <div id='gameInfo'>
@@ -91,6 +112,7 @@ session_start();
         </div>";
         ?>
 
+        <!-- Include the footer -->
         <?php include_once 'footer.php'; ?>
     </body>
 </html>

@@ -28,7 +28,7 @@ session_start();
         include_once 'header.php';
         $sql = "
             SELECT gameID, gameName, description, releaseDate, gameImage FROM gdb_games
-            ORDER BY releaseDate DESC";
+            ORDER BY gameName";
 
         $result = $conn->query($sql);
 
