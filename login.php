@@ -11,7 +11,7 @@ $login = filter_input(INPUT_POST, "login");
 $logout = filter_input(INPUT_POST, "logout");
 
 if (isset($login)) {
-    $email = filter_input(INPUT_POST, "email");
+    $email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
     $password = filter_input(INPUT_POST, "password");
 
     if ($email != "" && $password != "") {
@@ -30,9 +30,9 @@ if (isset($login)) {
             }
         }
     }
-} else if(isset($logout)){
+} else if (isset($logout)) {
     unset($_SESSION['username']);
 }
 
 
-header('Location: ../' . $_SESSION['previous_location']);
+header('Location: ..' . $_SESSION['previous_location']);
