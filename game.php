@@ -1,6 +1,28 @@
 <?php
 // Start a session
 session_start();
+include_once 'connection.php';
+// Get ID for game.
+        $game = filter_input(INPUT_GET, game);
+
+        // Set session variable for game so that'll remember when you reload page.
+        if (!isset($_SESSION['game'])) {
+            $_SESSION['game'] = $game;
+        } else if (isset($_SESSION['game'])) {
+            if ($game == "" || $game == null) {
+                
+            } else {
+                $_SESSION['game'] = $game;
+            }
+        }
+
+$name = "SELECT gameName FROM gdb_games WHERE gameID = " . $_SESSION['game'];
+
+$sqlName = $conn->query($name);
+
+while ($row = mysqli_fetch_array($sqlName)) {
+    $gName = $row["gameName"];
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -8,7 +30,7 @@ session_start();
         <!-- Meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Games</title>
+        <title><?php echo $gName; ?></title>
 
         <!-- Site Icons -->
         <link rel="apple-touch-icon" sizes="180x180" href="/../images/favicon/apple-touch-icon.png">
@@ -25,7 +47,6 @@ session_start();
     <body>
         <!-- Include header  and connection to database -->
         <?php
-        include_once 'connection.php';
         include_once 'header.php';
         ?>
 
@@ -33,19 +54,7 @@ session_start();
         <?php
         // Create Array.
         $genre = array();
-        // Get ID for game.
-        $game = filter_input(INPUT_GET, game);
-
-        // Set session variable for game so that'll remember when you reload page.
-        if (!isset($_SESSION['game'])) {
-            $_SESSION['game'] = $game;
-        } else if (isset($_SESSION['game'])) {
-            if ($game == "" || $game == null) {
-                
-            } else {
-                $_SESSION['game'] = $game;
-            }
-        }
+        
 
         // SQL Query.
         $sql = "
