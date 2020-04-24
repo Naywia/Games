@@ -217,25 +217,6 @@ input {
     padding: 0px 0px 0px 50px
 }
 
-/*#heading a {
-    color: #1f1f1f;
-    text-decoration: none;
-}
-
-#heading a:visited {
-    color: #1f1f1f;
-}
-
-#heading a:hover {
-    color: #1f1f1f;
-    text-decoration: underline;
-    font-weight: bold;
-}
-
-#heading a:active {
-    color: #1f1f1f;
-}*/
-
 .goBack {
     display: inline-block;
     border-radius: 20px;
@@ -308,23 +289,14 @@ input {
     text-align: left;
     overflow: hidden;
     z-index: 2;
-
-    padding-right:15px;
-    padding-left:15px;
-    margin-right:auto;
-    margin-left:auto;
+    justify-content: center;
 }
 
-.footerLeft {
+
+.footerCenter{
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     padding: 17px 0px;
-    width: 50%;
-}
-.footerRight{
-    display: flex;
-    justify-content: flex-end;
-    padding: 5px 0;
     width: 50%;
 }
 
