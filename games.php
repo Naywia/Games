@@ -68,7 +68,7 @@ session_start();
                 el: '#app',
                 data: {
                     search: '',
-                    postList: [
+                    gameList: [
 <?php
 foreach ($data as $row) {
     $gameID = $row['gameID'];
@@ -89,8 +89,8 @@ foreach ($data as $row) {
                 },
                 computed: {
                     filteredList() {
-                        return this.postList.filter(post => {
-                            return post.title.toLowerCase().includes(this.search.toLowerCase());
+                        return this.gameList.filter(game => {
+                            return game.title.toLowerCase().includes(this.search.toLowerCase());
                         });
                     }
                 }
