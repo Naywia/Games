@@ -49,12 +49,13 @@ session_start();
 
                 $resCount = count($result);
 
+                // Showing the result
                 for ($i = 0; $i < $resCount; $i++) {
                     echo $result[$i]->name;
                     echo "<br>";
                 }
 
-                // Showing the result
+                
             } catch (Exception $e) {
                 // Catching Exceptions, if there is any
                 echo $e->getMessage();
